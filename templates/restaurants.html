@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
+    <title>Restaurant Menu App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">Restaurants</h1>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class="message-list">
+            {% for message in messages %}
+              <li class="message-list__item">{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <div class="restaurant__list">
+      {% for restaurant in restaurants %}
+        <div class="restaurant" id="{{ restaurant[0].id }}">
+          <a class="restaurant__main-link" href="{{ url_for('showMenu', restaurant_id = restaurant[0].id) }}">
+            <div class="restaurant__main">
+            <h3 class="restaurant__title">{{ restaurant[0].name }}</h3>
+            <div class="restaurant__item-count">
+            {% if restaurant[1] != 1 and restaurant[1] != None%}
+              <span>{{restaurant[1]}} items</span>
+            {% elif restaurant[1] == 1%}
+              <span>1 item</span>
+            {% else %}
+              <span>No items</span>
+            {% endif %}
+          </div>
+        </div>
+          </a>
+          <div class="restaurant__links">
+            <a class="restaurant__link restaurant__link--edit" href="{{ url_for('editRestaurant', restaurant_id = restaurant[0].id) }}">Edit</a>
+            <a class="restaurant__link restaurant__link--delete" href="{{ url_for('deleteRestaurant', restaurant_id = restaurant[0].id) }}">Delete</a>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      <footer>
+        <a href="{{ url_for('newRestaurant') }}" class="restaurant__create">Add new restaurant</a>
+      </footer>
+    </div>
+  </body>
+</html>

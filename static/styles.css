@@ -1,0 +1,340 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0ed;
+  font-family: Roboto, sans-serif;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.large-heading {
+  font-family: Montserrat, sans-serif;
+}
+
+.menu-item, .message-list__item {
+  border-radius: 1rem;
+  font-family: Roboto, sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.restaurant__create, .button--create-item {
+  background-color: #00bcd4;
+}
+
+
+.menu-item__create, .restaurant__create, .button {
+  border-radius: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: Roboto, sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.message-list__item {
+  list-style-type: none;
+  background-color: #fefefe;
+  opacity: 0.5;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.two-column {
+  display: flex;
+}
+
+.two-column > :first-child {
+  flex: 1;
+  width: 100%;
+  margin-right: 0.5rem;
+}
+
+.two-column > :last-child {
+  flex: 3;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+form {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+.form__input {
+  border: none;
+  text-align: center;
+  padding: 0.5rem;
+  outline: none;
+  font-family: Montserrat, sans-serif;
+  border-radius: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form__heading {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.form__radio-group {
+  text-align: center;
+  margin-bottom: 1rem;
+  background: #fefefe;
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.form__radio-group input {
+  margin-left: -1000%;
+}
+
+.form__radio-group input:checked + label {
+  background-color: #2398f7;
+  color: white;
+}
+
+.form__radio-group label {
+  margin-left: calc(1000% - 1rem);
+  padding: 1rem;
+  flex: 1 1 auto;
+  cursor: pointer;
+  border-right: 0.1px solid rgba(0,0,0,0.1);
+}
+
+.form__radio-group label:last-child {
+  border-right: none;
+}
+
+.form__input--name {
+  width: 100%
+}
+
+.form__input--description {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form__input--price {
+  font-size:1rem;
+}
+
+.form__submit {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  font-size: 1rem;
+  width: 200px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  margin-top: 0.25rem;
+  font-family: Roboto, sans-serif;
+}
+
+.button--cancel {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  font-size: 1rem;
+  width: 200px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  font-family: Roboto, sans-serif;
+}
+
+.message-list {
+  padding: 0;
+}
+
+.restaurant {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;*/
+}
+
+.restaurant {
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fefefe;
+  text-align: left;
+  overflow: hidden;
+  margin: 0.5rem;
+}
+
+.restaurant__links {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Roboto, sans-serif;
+}
+
+.restaurant__links .restaurant__link {
+  background-color: #ddd;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-decoration: none;
+  color: white;
+  font-size:0.8rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+.restaurant__links .restaurant__link:first-child {
+  align-items:flex-end;
+  border-bottom:0.5px solid white;
+}
+
+.restaurant__links .restaurant__link:last-child {
+  align-items: flex-start;
+}
+
+.restaurant__main {
+  padding:0.5rem;
+  padding-left: 1rem;
+}
+
+.restaurant__main-link {
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
+
+.restaurant__item-count {
+  font-size:0.8rem;
+  color: #888;
+}
+
+.restaurant__title-link {
+  width: 100%;
+  //padding: 0.5rem;
+  //padding-left: 1rem;
+  text-decoration: none;
+}
+
+.restaurant__title {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.75rem;
+  margin: 0;
+  text-decoration: none;
+  color: #222;
+}
+
+.menu-item {
+  background-color:#fefefe;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.page-title {
+  font-family:Montserrat, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  opacity: 0.6;
+  border-bottom: 0.5px solid black;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.menu-item__title {
+  font-family:Montserrat, sans-serif;
+  margin: 0;
+  float: left;
+  font-size: 1.25rem;
+}
+
+.menu-item__price {
+  float:right;
+}
+.menu-item__header {
+  overflow: auto;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.menu-item__header::after {
+  clear:both;
+  display:table;
+  position:relative;
+}
+
+.menu-item__course {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1px solid rgba(0,0,0,0.1)
+}
+
+.menu-item__description {
+  margin-top: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+.menu-item__links {
+  font-size: 0.75rem;
+  display: flex;
+}
+
+.menu-item__links .menu-item__link {
+  width: 50%;
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  background-color: #ddd;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.menu-item__links .menu-item__link:first-child {
+  border-right: 0.5px solid white;
+}
+
+.menu-item__link--delete:hover, .form__submit--delete, .restaurant__link--delete:hover, .button--go-back {
+  background-color: rgb(255, 51, 51);
+}
+.button--cancel {
+  background-color: darkorange;
+}
+.menu-item__link--edit:hover, .form__submit--edit, .restaurant__link--edit:hover {
+  background-color: rgb(9, 203, 246);
+}
+
+.form__submit--create {
+  background-color: #00bcd4;
+}
+
+
+
+footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
