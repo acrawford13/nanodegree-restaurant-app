@@ -1,4 +1,3 @@
-# Puppy Populator
+# Restaurant App
 
-The solution to the exercise problem set is in the `puppy_query.py` file.
-
+Restaurant app based on Flask
